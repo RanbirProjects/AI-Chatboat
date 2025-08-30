@@ -1,0 +1,53 @@
+.App {
+  text-align: left;
+}
+
+.prose {
+  max-width: none;
+}
+
+.prose p {
+  margin-bottom: 0.5rem;
+}
+
+.prose p:last-child {
+  margin-bottom: 0;
+}
+
+.prose ul, .prose ol {
+  margin-bottom: 0.5rem;
+}
+
+.prose li {
+  margin-bottom: 0.25rem;
+}
+
+.prose code {
+  background-color: rgb(243 244 246);
+  padding: 0.125rem 0.25rem;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+}
+
+.dark .prose code {
+  background-color: rgb(55 65 81);
+}
+
+.prose pre {
+  background-color: rgb(17 24 39);
+  color: rgb(243 244 246);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+}
+
+.prose blockquote {
+  border-left: 4px solid rgb(59 130 246);
+  padding-left: 1rem;
+  font-style: italic;
+  color: rgb(107 114 128);
+}
+
+.dark .prose blockquote {
+  color: rgb(156 163 175);
+}

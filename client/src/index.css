@@ -1,0 +1,340 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Modern AI-themed color palette */
+:root {
+  --ai-primary: #6366f1;
+  --ai-secondary: #8b5cf6;
+  --ai-accent: #06b6d4;
+  --ai-success: #10b981;
+  --ai-warning: #f59e0b;
+  --ai-error: #ef4444;
+  --ai-dark: #0f172a;
+  --ai-light: #f8fafc;
+}
+
+/* Custom AI-themed background patterns */
+@layer utilities {
+  .ai-pattern {
+    background-image: 
+      radial-gradient(circle at 25% 25%, rgba(99, 102, 241, 0.15) 0%, transparent 50%),
+      radial-gradient(circle at 75% 75%, rgba(139, 92, 246, 0.15) 0%, transparent 50%),
+      radial-gradient(circle at 50% 50%, rgba(6, 182, 212, 0.1) 0%, transparent 50%);
+  }
+  
+  .ai-grid {
+    background-image: 
+      linear-gradient(rgba(99, 102, 241, 0.1) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(99, 102, 241, 0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+  
+  .ai-dots {
+    background-image: radial-gradient(circle, rgba(99, 102, 241, 0.2) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+
+  .ai-hexagon {
+    background-image: 
+      radial-gradient(circle at 50% 50%, rgba(99, 102, 241, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 25% 25%, rgba(139, 92, 246, 0.08) 0%, transparent 50%),
+      radial-gradient(circle at 75% 75%, rgba(6, 182, 212, 0.08) 0%, transparent 50%);
+  }
+
+  .ai-circuit {
+    background-image: 
+      linear-gradient(90deg, transparent 98%, rgba(99, 102, 241, 0.1) 100%),
+      linear-gradient(0deg, transparent 98%, rgba(139, 92, 246, 0.1) 100%);
+    background-size: 30px 30px;
+  }
+
+  .ai-neon-glow {
+    box-shadow: 
+      0 0 20px rgba(99, 102, 241, 0.5),
+      0 0 40px rgba(139, 92, 246, 0.3),
+      0 0 60px rgba(6, 182, 212, 0.1);
+  }
+
+  .ai-text-glow {
+    text-shadow: 
+      0 0 10px rgba(99, 102, 241, 0.5),
+      0 0 20px rgba(139, 92, 246, 0.3);
+  }
+
+  .ai-border-glow {
+    border: 1px solid rgba(99, 102, 241, 0.3);
+    box-shadow: 
+      inset 0 0 20px rgba(99, 102, 241, 0.1),
+      0 0 20px rgba(99, 102, 241, 0.2);
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #6366f1, #8b5cf6, #06b6d4);
+  border-radius: 8px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #4f46e5, #7c3aed, #0891b2);
+}
+
+/* Dark mode scrollbar */
+.dark ::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Body styles with enhanced gradients */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: 
+    linear-gradient(135deg, #f0f9ff 0%, #e0e7ff 25%, #fdf4ff 50%, #f0fdf4 75%, #f0f9ff 100%),
+    radial-gradient(circle at 20% 80%, rgba(99, 102, 241, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.1) 0%, transparent 50%);
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+.dark body {
+  background: 
+    linear-gradient(135deg, #0f172a 0%, #1e293b 25%, #1e1b4b 50%, #0f172a 75%, #0f172a 100%),
+    radial-gradient(circle at 20% 80%, rgba(99, 102, 241, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.15) 0%, transparent 50%);
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+/* Code styles */
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+/* Enhanced floating animation for AI elements */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-10px) rotate(1deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(0deg);
+  }
+  75% {
+    transform: translateY(-10px) rotate(-1deg);
+  }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Gradient text animation */
+@keyframes gradient-shift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient-shift 3s ease infinite;
+}
+
+/* Enhanced glow effects */
+.glow-on-hover:hover {
+  box-shadow: 
+    0 0 20px rgba(99, 102, 241, 0.5),
+    0 0 40px rgba(139, 92, 246, 0.3),
+    0 0 60px rgba(6, 182, 212, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Backdrop blur enhancement */
+.backdrop-blur-enhanced {
+  backdrop-filter: blur(25px) saturate(200%);
+  -webkit-backdrop-filter: blur(25px) saturate(200%);
+}
+
+/* Modern card styles */
+.modern-card {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.dark .modern-card {
+  background: rgba(30, 41, 59, 0.8);
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(99, 102, 241, 0.1);
+}
+
+/* Animated borders */
+.animated-border {
+  position: relative;
+  background: linear-gradient(45deg, #6366f1, #8b5cf6, #06b6d4, #6366f1);
+  background-size: 400% 400%;
+  animation: gradient-shift 3s ease infinite;
+  padding: 2px;
+  border-radius: 12px;
+}
+
+.animated-border > * {
+  background: inherit;
+  border-radius: 10px;
+}
+
+/* Particle effect background */
+.particle-bg {
+  position: relative;
+  overflow: hidden;
+}
+
+.particle-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(2px 2px at 20px 30px, rgba(99, 102, 241, 0.3), transparent),
+    radial-gradient(2px 2px at 40px 70px, rgba(139, 92, 246, 0.3), transparent),
+    radial-gradient(1px 1px at 90px 40px, rgba(6, 182, 212, 0.3), transparent),
+    radial-gradient(1px 1px at 130px 80px, rgba(99, 102, 241, 0.3), transparent),
+    radial-gradient(2px 2px at 160px 30px, rgba(139, 92, 246, 0.3), transparent);
+  background-repeat: repeat;
+  background-size: 200px 100px;
+  animation: particle-float 20s linear infinite;
+  opacity: 0.6;
+}
+
+@keyframes particle-float {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-100px);
+  }
+}
+
+/* Modern button styles */
+.modern-btn {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  border: none;
+  border-radius: 12px;
+  padding: 12px 24px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.modern-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.modern-btn:hover::before {
+  left: 100%;
+}
+
+.modern-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(99, 102, 241, 0.4);
+}
+
+/* Glass morphism effect */
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.dark .glass {
+  background: rgba(30, 41, 59, 0.1);
+  border: 1px solid rgba(99, 102, 241, 0.2);
+}
+
+/* Neon text effect */
+.neon-text {
+  color: #6366f1;
+  text-shadow: 
+    0 0 5px #6366f1,
+    0 0 10px #6366f1,
+    0 0 15px #6366f1,
+    0 0 20px #6366f1;
+}
+
+/* Animated gradient background */
+.animated-bg {
+  background: linear-gradient(-45deg, #6366f1, #8b5cf6, #06b6d4, #10b981);
+  background-size: 400% 400%;
+  animation: gradient-shift 15s ease infinite;
+}
+
+/* Modern input styles */
+.modern-input {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  border-radius: 12px;
+  padding: 12px 16px;
+  color: inherit;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.modern-input:focus {
+  outline: none;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.dark .modern-input {
+  background: rgba(30, 41, 59, 0.1);
+  border-color: rgba(99, 102, 241, 0.3);
+  color: white;
+}
+
+.dark .modern-input:focus {
+  background: rgba(30, 41, 59, 0.2);
+}
