@@ -1,7 +1,16 @@
 # AI Chatbot - MERN Stack
 
 A full-stack AI chatbot application built with MongoDB, Express.js, React.js, and Node.js, featuring OpenAI integration and modern UI/UX.
-
+Login page
+![2CCACC61-A3EF-4EE9-BB64-D69D691B4002](https://github.com/user-attachments/assets/79aadad6-099d-440f-b1c4-71611904079b)
+Overview
+![4B233324-5527-4F60-A069-8E651EA72F53](https://github.com/user-attachments/assets/99538c54-0441-46f1-94ba-7bb1e57bd0a5)
+Features
+![582B5951-FEE7-456D-A28B-D7EDB8E549B3](https://github.com/user-attachments/assets/6bf8a931-1e0e-41e3-a85e-8fe9d35e89b9)
+Security
+![CAFBABE7-278C-4CCF-99FF-D31A93CA3753](https://github.com/user-attachments/assets/368bc355-2d17-45d7-89ba-64052844ed58)
+Settings
+![0C91CB52-D3E6-430C-91D3-3D31C6FBCA5C](https://github.com/user-attachments/assets/7d1b3687-ca14-4618-a72f-b28cb4d28654)
 ## 🚀 Features
 
 - **AI-Powered Conversations**: Integration with OpenAI GPT models
